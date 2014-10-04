@@ -4,13 +4,23 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
+Button boton;
+EditText texto;
+CheckBox chequeo;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+	boton=(Button)findViewById(R.id.boton);
+	texto=(EditText)findViewById(R.id.texto);
+	chequeo=(CheckBox)findViewById(R.id.check);
+	
 	}
 
 	@Override
