@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/user" />
-
+        androd:id="@+id/label"
     <EditText
         android:layout_width="350dp"
         android:layout_height="wrap_content"
@@ -33,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/boton"
+        android:onClick="btnaceptar"
         />
 
 </LinearLayout>
