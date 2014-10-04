@@ -12,8 +12,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/user" />
-        androd:id="@+id/label"
+        android:text="@string/user"
+        android:id="@+id/label"  />
+        
     <EditText
         android:layout_width="350dp"
         android:layout_height="wrap_content"

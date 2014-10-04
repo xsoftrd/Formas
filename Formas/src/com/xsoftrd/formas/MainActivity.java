@@ -23,7 +23,7 @@ String printeo;
 	boton=(Button)findViewById(R.id.boton);
 	texto=(EditText)findViewById(R.id.texto);
 	chequeo=(CheckBox)findViewById(R.id.check);
-	etiqueta=(TextView)findViewById(R.id.texto);
+	etiqueta=(TextView)findViewById(R.id.label);
 	}
 
 	@Override
@@ -48,7 +48,8 @@ String printeo;
 	{
 	if(chequeo.isChecked()==true) 
 	{
-	printeo=texto.getText();
+	printeo=texto.getText().toString();
+	etiqueta.setText(printeo);
 	
 	
 	}
