@@ -28,7 +28,12 @@
         android:text="status" 
         android:id="@+id/check"
         />
-   
+    <Spinner 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Spinner"
+        />
+       
     <Button 
         android:text="@string/boton"
         android:layout_width="wrap_content"
