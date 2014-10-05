@@ -5,17 +5,22 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
-
+import android.widget.Spinner;
 public class MainActivity extends Activity {
 Button boton;
 EditText texto;
 CheckBox chequeo;
 TextView etiqueta;
 String printeo;
+Spinner Spinner;
+
+
 @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -24,13 +29,18 @@ String printeo;
 	texto=(EditText)findViewById(R.id.texto);
 	chequeo=(CheckBox)findViewById(R.id.check);
 	etiqueta=(TextView)findViewById(R.id.label);
-	}
+	Spinner=(Spinner)findViewById(R.id.Spinner);
+ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(this, R.array.cuidad,R.layout.simple_spinner_item );
+adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+Spinner.setAdapter(adapter);
+}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+
 	}
 
 	@Override
