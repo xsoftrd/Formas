@@ -12,28 +12,31 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Spinner;
+
 public class MainActivity extends Activity {
-Button boton;
-EditText texto;
-CheckBox chequeo;
-TextView etiqueta;
-String printeo;
-Spinner Spinner;
+	Button boton;
+	EditText texto;
+	CheckBox chequeo;
+	TextView etiqueta;
+	String printeo;
+	Spinner Spinner;
 
-
-@Override
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-	boton=(Button)findViewById(R.id.boton);
-	texto=(EditText)findViewById(R.id.texto);
-	chequeo=(CheckBox)findViewById(R.id.check);
-	etiqueta=(TextView)findViewById(R.id.label);
-	Spinner=(Spinner)findViewById(R.id.Spinner);
-ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(this, R.array.cuidad,R.layout.simple_spinner_item );
-adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-Spinner.setAdapter(adapter);
-}
+		//Union parte de las vistas
+		boton = (Button) findViewById(R.id.boton);
+		texto = (EditText) findViewById(R.id.texto);
+		chequeo = (CheckBox) findViewById(R.id.check);
+		etiqueta = (TextView) findViewById(R.id.label);
+		Spinner = (Spinner) findViewById(R.id.Spinner);
+		
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+				this, R.array.cuidad, android.R.layout.simple_spinner_item);
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		Spinner.setAdapter(adapter);
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -42,6 +45,7 @@ Spinner.setAdapter(adapter);
 		return true;
 
 	}
+	
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -54,14 +58,12 @@ Spinner.setAdapter(adapter);
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	public void btnaceptar(View view)
-	{
-	if(chequeo.isChecked()==true) 
-	{
-	printeo=texto.getText().toString();
-	etiqueta.setText(printeo);
-	
-	
-	}
+
+	public void btnaceptar(View view) {
+		if (chequeo.isChecked() == true) {
+			printeo = texto.getText().toString();
+			etiqueta.setText(printeo);
+
+		}
 	}
 }
